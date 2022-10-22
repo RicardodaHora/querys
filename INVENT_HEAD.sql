@@ -1,0 +1,29 @@
+
+
+CREATE TABLE [dbo].[INVENT_HEAD](
+	[NRECNO] [numeric](15, 0) NULL,
+	[CHAVE] [numeric](10, 0) NULL,
+	[DATA_INV] [datetime] NULL,
+	[EMPRESA] [numeric](6, 0) NULL,
+	[ENDFIS] [char](1) NULL,
+	[INC_LOTE] [char](1) NULL,
+	[INVINIC] [char](1) NULL,
+	[ITENEST] [char](1) NULL,
+	[LOCAL] [char](15) NULL,
+	[LOCFIS] [char](20) NULL,
+	[MULTLOC] [char](1) NULL,
+	[OBS1] [text] NULL,
+	[OBS2] [char](200) NULL,
+	[OBS3] [char](200) NULL,
+	[PRODCOMP] [char](1) NULL,
+	[STAT_INV] [char](1) NULL,
+	[FABRICA] [numeric](1, 0) NULL,
+	[USUARIO] [char](20) NULL,
+	[DIARIO] [char](1) NULL,
+	[IDWMS] [char](12) NULL,
+UNIQUE NONCLUSTERED 
+(
+	[NRECNO] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, FILLFACTOR = 90) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
