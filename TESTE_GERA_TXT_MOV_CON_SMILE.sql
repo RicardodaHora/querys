@@ -5,7 +5,7 @@ DECLARE @DATA_FIM VARCHAR(10)
 SET @DATA_INI = CONVERT(DATE,DateAdd(mm, DateDiff(mm,0,GetDate()) , 0),112) 
 SET @DATA_FIM = CONVERT(DATE,GETDATE()-1,100)
 SET @DATA_INI = '07/01/2016'
-SET @DATA_FIM = '12/31/2019'
+SET @DATA_FIM = '12/31/2022'
 --*/
 
 DECLARE @str_NomeArquivo varchar(max)
