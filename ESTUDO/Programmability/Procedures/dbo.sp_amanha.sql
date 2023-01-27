@@ -3,5 +3,5 @@ GO
 CREATE proc [dbo].[sp_amanha]
 as
 
-select getdate()-1
+select getdate()-1 as Amanha
 GO
