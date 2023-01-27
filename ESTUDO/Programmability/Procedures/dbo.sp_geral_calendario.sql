@@ -1,0 +1,18 @@
+﻿SET QUOTED_IDENTIFIER, ANSI_NULLS ON
+GO
+Create procedure [dbo].[sp_geral_calendario] @DataInicial DATETIME, @DataFinal DATETIME  
+as
+begin
+ 
+	;WITH Nums (Num) As (  
+	SELECT 0 UNION ALL SELECT 1 UNION ALL 
+	SELECT 2 UNION ALL SELECT 3 UNION ALL 
+	SELECT 4 UNION ALL SELECT 5 UNION ALL 
+	SELECT 6 UNION ALL SELECT 7 UNION ALL 
+	SELECT 8 UNION ALL SELECT 9)  
+ 
+	SELECT DATEADD(D,(N1.Num * 10) + N2.Num,@DataInicial) As Data  
+	FROM Nums AS N1 CROSS JOIN Nums AS N2  
+	WHERE DATEADD(D,(N1.Num * 10) + N2.Num,@DataInicial) <= @DataFinal 
+end
+GO
